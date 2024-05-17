@@ -1,0 +1,10 @@
+.Container{
+    background-image: url('https://firebasestorage.googleapis.com/v0/b/restaurante-menu-5bad4.appspot.com/o/fundo-tijolos.jpg?alt=media&token=e27bc63d-42bf-4185-83e9-c7a6e1f3f09d');
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 30px;
+    width: calc(100% - 10%);
+    max-height: max-content;
+}

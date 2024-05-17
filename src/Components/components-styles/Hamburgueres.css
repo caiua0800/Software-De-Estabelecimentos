@@ -1,0 +1,20 @@
+.Hamburgueres{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.home-section{
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.699);
+    color: white;
+    border-radius: 16px;
+    padding: 20px;
+    justify-content: start;
+    align-items: start;
+}
+
