@@ -21,9 +21,18 @@
 
 .cart-item{
     padding-left: 30px;
-    margin: 10px;
+    margin: 2px;
     font-weight: 600;
     font-style: italic;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid black;
+}
+
+.cart-item button{
+    margin-right: 50px;
+    cursor: pointer;
 }
 
 .values{

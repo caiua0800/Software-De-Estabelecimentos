@@ -1,27 +1,40 @@
-import './components-styles/Cart.css'
-import React from 'react'
+import './components-styles/Cart.css';
+import React from 'react';
 
-export default function Cart(){
+export default function Cart({ items, setCartItems }) {
+
+    let valorTotal = 0;
+
+    items.forEach(item => {
+        valorTotal += parseFloat(item.valor)
+    })
+
+    const handleDeleteItem = (indexToRemove) => {
+        setCartItems(prevItems => prevItems.filter((_, index) => index !== indexToRemove));
+    }
 
     return (
         <div className='Cart'>
             <ul className='cart-items'>
                 <h1>Pedidos</h1>
-                <li className='cart-item'>
-                    Hamburguer
-                </li>
-                <li className='cart-item'>Drink </li>
-                <li className='cart-item'>(2x) Budweiser Litrão</li>
-                <li className='cart-item'>Hamburguer Premium </li>
-                <li className='cart-item'>Hot-Dog</li>
+                {items.length > 0 ? (
+                    items.map((item, index) => (
+                        <li className='cart-item' key={index}>
+                            <h3>{item.title}</h3>
+                            <button onClick={() => handleDeleteItem(index)}>Remover</button>
+                        </li>
+                    ))
+                ) : (
+                    <li>O carrinho está vazio.</li>
+                )}
             </ul>
 
             <div className='values'>
-                <h4>TOTAL: <span>R$00,00</span></h4>
+                <h4>TOTAL: <span>R${valorTotal.toFixed(2)}</span></h4>
             </div>
 
             <div className='btn-area-cart'>
-                <div>
+                {/* <div>
                     <h2>MÉTODO DE PAGAMENTO:</h2>
                     <select>
                         <option>Selecione</option>
@@ -30,10 +43,9 @@ export default function Cart(){
                         <option>Dinheiro</option>
                         <option>Pix</option>
                     </select>
-                </div>
-                <button>Pedir a conta</button>
+                </div> */}
+                <button>Fazer Pedido</button>
             </div>
-
         </div>
-    )
+    );
 }

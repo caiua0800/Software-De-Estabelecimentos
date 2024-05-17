@@ -38,7 +38,7 @@ export default function Cards({setCartItems}) {
             <button className="left-arrow arrow" onClick={scrollLeft}><img src={leftImage} alt="left" /></button>
             <div className='carousel' ref={carouselRef}>
                 <div className='Cards'>
-                    <Card setCartItems={setCartItems} title="DRINK" src="src" description="Feito de ..." />
+                    <Card valor="10,00" setCartItems={setCartItems} title="DRINK" src="src" description="Feito de ..." />
                 </div>
             </div>
             <button className="right-arrow arrow" onClick={scrollRight}><img src={rightImage} alt="right" /></button>

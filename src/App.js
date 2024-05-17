@@ -33,7 +33,7 @@ function App() {
               <Route path="/favorites" element={<Favorites setCartItems={setCartItems}  />} />
               <Route path="/drink" element={<Drinks setCartItems={setCartItems}  />} />
               <Route path="/hamburgueres" element={<Hamburgueres setCartItems={setCartItems}  />} />
-              <Route path="/cart" element={<Cart items={CartItems} />} />
+              <Route path="/cart" element={<Cart setCartItems={setCartItems} items={CartItems} />} />
 
             </Routes>
 
