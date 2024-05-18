@@ -11,43 +11,43 @@ import Cart from './Components/Cart';
 import React, { useState, useEffect } from 'react';
 import CallHelpModal from './Components/CallHelpModal';
 import Pedidos from './Components/Pedidos';
-
+import ModalGeral from './Components/ModalGeral';
 
 function App() {
 
   const [CartItems, setCartItems] = useState([]);
   const [PedidosList, setPedidosList] = useState([])
   const [callHelp, setCallHelp] = useState(false);
-  // const [callBill, setCallBill] = useState(false);
+  const [ModalGeralShow, setModalGeralShow] = useState('d-none')
+  const [ModalGeralText, setModalGeralText] = useState('texto')
 
   const cardapio = {
 
     hamburguer: [
         {
             nome: 'Duplo Bacon',
-            src: 'https://firebasestorage.googleapis.com/v0/b/restaurante-menu-5bad4.appspot.com/o/cardapio%2Fhamburguer%2Fduble-bacon.png?alt=media&token=f8e25051-8dcd-42d3-888b-45c929999f67',
+            src: 'https://firebasestorage.googleapis.com/v0/b/restaurante-menu-5bad4.appspot.com/o/cardapio%2Fhamburguer%2Fbacon.jpeg?alt=media&token=207e31a0-cb78-4867-922b-f9783c067922',
             desc: '(2x) 250g costela, bacon, cheader, molho da casa',
             valor: 38.60,
             fav: true
         },
         {
             nome: 'Triple Bacon Cheese',
-            src: 'https://firebasestorage.googleapis.com/v0/b/restaurante-menu-5bad4.appspot.com/o/cardapio%2Fhamburguer%2Ftriple-cheese.png?alt=media&token=5c2bcea8-208d-4566-a47f-ad1f0bc01e92',
+            src: 'https://firebasestorage.googleapis.com/v0/b/restaurante-menu-5bad4.appspot.com/o/cardapio%2Fhamburguer%2Fcheader.jpeg?alt=media&token=f93e0484-2701-4ba3-b717-95546065ab5e',
             desc: '3 camadas de cheader, bacon crocante, cebola caramelizada, 200g costela',
             valor: 42.20,
             fav: true
         },
         {
           nome: 'Barbecue Hungry',
-          src: 'https://firebasestorage.googleapis.com/v0/b/restaurante-menu-5bad4.appspot.com/o/cardapio%2Fhamburguer%2Fbarbecue-hungry.png?alt=media&token=8075d698-a984-41d1-94ee-34a80aafcca2',
+          src: 'https://firebasestorage.googleapis.com/v0/b/restaurante-menu-5bad4.appspot.com/o/cardapio%2Fhamburguer%2Fbabecue.jpg?alt=media&token=a9dab445-0ef5-4e04-8638-b1d5b1a63986',
           desc: 'Barbecue, 250g Picanha, Queijo Brie',
           valor: 52.50,
           fav: false
         },
         {
           nome: 'Ciri Cascudo',
-          src: 'https://firebasestorage.googleapis.com/v0/b/restaurante-menu-5bad4.appspot.com/o/cardapio%2Fhamburguer%2Fcirigueijo.png?alt=media&token=7fb97ed9-a7f2-4ffe-912d-129d3beb896f',
-          desc: 'Receita Secreta',
+          src: 'https://firebasestorage.googleapis.com/v0/b/restaurante-menu-5bad4.appspot.com/o/cardapio%2Fhamburguer%2Fciri%20cascudo.jpeg?alt=media&token=7a90c931-6b19-46e5-9c67-b1fe5ea19bb7',
           valor: 28.50,
           fav: false
         }
@@ -56,7 +56,7 @@ function App() {
     drink: [
       {
         nome: 'Morando Split Vodka',
-        src: 'https://firebasestorage.googleapis.com/v0/b/restaurante-menu-5bad4.appspot.com/o/cardapio%2Fdrinks%2Fmorango-splited.png?alt=media&token=fd8b5046-aca6-4219-941d-0f6c3796c0c7',
+        src: 'https://firebasestorage.googleapis.com/v0/b/restaurante-menu-5bad4.appspot.com/o/cardapio%2Fdrinks%2Fmorango.jpeg?alt=media&token=bb65ba13-fcb4-4bb9-bff3-912e928919e6',
         desc: 'Vodka, Morando, Cementes, Adoçante',
         valor: 18.50,
         fav: true,
@@ -64,16 +64,16 @@ function App() {
       },
       {
         nome: 'Dose Red Lable',
-        src: 'https://firebasestorage.googleapis.com/v0/b/restaurante-menu-5bad4.appspot.com/o/cardapio%2Fdrinks%2Fwisk-gelo.png?alt=media&token=b095f6e0-17c4-4cf3-a15f-6afa75149d46',
-        desc: '100ml RED BLACK',
+        src: 'https://firebasestorage.googleapis.com/v0/b/restaurante-menu-5bad4.appspot.com/o/cardapio%2Fdrinks%2Fred-lable.jpg?alt=media&token=e645abb6-bf3e-4202-b73a-22252c9acb9e',
+        desc: '100ml RED LABLE',
         valor: 15.50,
         fav: false,
         alcool: true
       },
       {
         nome: 'Sucos Naturais',
-        src: 'https://firebasestorage.googleapis.com/v0/b/restaurante-menu-5bad4.appspot.com/o/cardapio%2Fdrinks%2Fnatural-juices.png?alt=media&token=45da2539-5812-4647-b760-74857f5726f4',
-        desc: 'Laranja, Morango, Maçã, Abacaxi',
+        src: 'https://firebasestorage.googleapis.com/v0/b/restaurante-menu-5bad4.appspot.com/o/cardapio%2Fdrinks%2Fsucos.jpeg?alt=media&token=590534f3-5bd4-4da8-b4bf-27fe6f05f9c6',
+        desc: 'Abacaxi, Laranja, Morango, Abacaxi com Hortelã',
         valor: 8.90,
         fav: true,
         alcool: false
@@ -88,6 +88,8 @@ function App() {
 
         <CallHelpModal callHelp={callHelp}/>
 
+        <ModalGeral addClass={ModalGeralShow} text={ModalGeralText}></ModalGeral>
+
         <ContainerPart>
 
           <LeftNavbar setCallHelp={setCallHelp} title="Logo" />
@@ -97,11 +99,11 @@ function App() {
             <Routes>
 
               <Route path="/home" element={<Home setCallHelp={setCallHelp} setCartItems={setCartItems} />} />
-              <Route path="/favorites" element={<Favorites cardapio={cardapio} setCartItems={setCartItems}  />} />
+              <Route path="/favorites" element={<Favorites setModalGeralShow={setModalGeralShow} setModalGeralText={setModalGeralText} cardapio={cardapio} setCartItems={setCartItems}  />} />
               
-              <Route path="/drink" element={<Drinks cardapio={cardapio} setCartItems={setCartItems}  />} />
+              <Route path="/drink" element={<Drinks setModalGeralShow={setModalGeralShow} setModalGeralText={setModalGeralText} cardapio={cardapio} setCartItems={setCartItems}  />} />
 
-              <Route path="/hamburgueres" element={<Hamburgueres cardapio={cardapio} setCartItems={setCartItems}  />} />
+              <Route path="/hamburgueres" element={<Hamburgueres setModalGeralShow={setModalGeralShow} setModalGeralText={setModalGeralText} cardapio={cardapio} setCartItems={setCartItems}  />} />
 
               <Route path="/cart" element={<Cart setPedidosList={setPedidosList} setCartItems={setCartItems} items={CartItems} />} />
 

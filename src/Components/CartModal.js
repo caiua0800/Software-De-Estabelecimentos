@@ -1,5 +1,6 @@
 import React from "react";
 import './components-styles/CartModal.css';
+import { Link } from "react-router-dom";
 
 export default function CartModal({ showModal, items, setCartItems, setShowModal, setPedidosList, valorTotal }) {
 
@@ -30,7 +31,9 @@ export default function CartModal({ showModal, items, setCartItems, setShowModal
                 <div className="button-modal-area">
                     <h4>R${valorTotal}</h4>
                     <button onClick={handleCancel} className="cancel">Cancelar</button>
-                    <button onClick={handleConfirm} className="confirm">Confirmar</button>
+                    <Link to="/pedidos" className="link-no-style">
+                        <button onClick={handleConfirm} className="confirm">Confirmar</button>
+                    </Link>
                 </div>
             </div>
         </div>

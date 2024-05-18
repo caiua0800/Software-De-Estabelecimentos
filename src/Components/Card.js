@@ -2,17 +2,24 @@ import React from 'react';
 import './components-styles/Card.css'; 
 
 export default function Card(props) {
-    const { title, src, description, setCartItems, valor } = props;
+    const { title, src, description, setCartItems, valor, setModalGeralText, setModalGeralShow} = props;
 
 
     const handleAddToCart = () => {
         setCartItems(prevItems => [...prevItems, { title, valor}]);
+        setModalGeralText(`${title} adicionado no carrinho`);
+        setModalGeralShow('ModalGeral');
+
+        setTimeout(() => {
+            setModalGeralShow('d-none')
+        },1000)
     };
 
     return (
         <div className='Card'>
+            
             <div className='card-face'>
-                {/* <img alt='img' src={src} /> */}
+                <img alt='img' src={src} />
             </div>
             <div className='card-body'>
                 <div>

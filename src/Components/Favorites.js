@@ -2,7 +2,7 @@ import './components-styles/Favorites.css'
 import React from 'react'
 import Cards from './Cards'
 
-export default function Favorites( {setCartItems, cardapio} ){
+export default function Favorites( {setCartItems, cardapio,setModalGeralShow, setModalGeralText} ){
 
     let drinks = []
     let hamburgueres = []
@@ -22,13 +22,13 @@ export default function Favorites( {setCartItems, cardapio} ){
         <div className='Favorites'>
             <div className='drinks home-section'>
                 <h1>DRINKS</h1>
-                <Cards cardapio={drinks} setCartItems={setCartItems} />
+                <Cards setModalGeralShow={setModalGeralShow} setModalGeralText={setModalGeralText} cardapio={drinks} setCartItems={setCartItems} />
 
             </div>
 
             <div className='drinks home-section'>
                 <h1>HAMBURGUERES</h1>
-                <Cards cardapio={hamburgueres} setCartItems={setCartItems} />
+                <Cards setModalGeralShow={setModalGeralShow} setModalGeralText={setModalGeralText} cardapio={hamburgueres} setCartItems={setCartItems} />
 
             </div>
 

@@ -2,7 +2,7 @@ import './components-styles/Drinks.css'
 import React from 'react'
 import Cards from './Cards'
 
-export default function Drinks({setCartItems, cardapio}){
+export default function Drinks({setCartItems, cardapio, setModalGeralText, setModalGeralShow}){
 
     const cardapio_drinks = cardapio.drink
     let cardapio_drinks2 = []
@@ -16,12 +16,12 @@ export default function Drinks({setCartItems, cardapio}){
         <div className='Drinks'>
             <div className='drinks home-section'>
                 <h1>DRINKS</h1>
-                <Cards cardapio={cardapio_drinks} setCartItems={setCartItems}/>
+                <Cards setModalGeralShow={setModalGeralShow} setModalGeralText={setModalGeralText} cardapio={cardapio_drinks} setCartItems={setCartItems}/>
             </div>
 
             <div className='drinks home-section'>
-                <h1>NÃO ALCOÓLICOS</h1>
-                <Cards cardapio={cardapio_drinks2} setCartItems={setCartItems}/>
+                <h1>SEM ALCOÓL</h1>
+                <Cards setModalGeralShow={setModalGeralShow} setModalGeralText={setModalGeralText} cardapio={cardapio_drinks2} setCartItems={setCartItems}/>
             </div>
         </div>
     )

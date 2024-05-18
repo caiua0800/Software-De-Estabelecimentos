@@ -2,12 +2,11 @@ import React, { useRef, useState } from "react";
 import './components-styles/Cards.css';
 import Card from "./Card";
 
-export default function Cards({setCartItems, cardapio}) {
+export default function Cards({setCartItems, cardapio, setModalGeralShow, setModalGeralText}) {
 
     const carouselRef = useRef(null);
     const leftImage = 'https://firebasestorage.googleapis.com/v0/b/restaurante-menu-5bad4.appspot.com/o/leftArrow-removebg-preview.png?alt=media&token=3f258d15-4184-424c-b864-068ad798e01a';
     const rightImage = 'https://firebasestorage.googleapis.com/v0/b/restaurante-menu-5bad4.appspot.com/o/rightArrow-removebg-preview.png?alt=media&token=1f51ceab-86a2-4c5e-b2a0-6aed74ae8e91';
-
 
 
 
@@ -34,7 +33,7 @@ export default function Cards({setCartItems, cardapio}) {
                 <div className='Cards'>
                     {cardapio.map((item, index) => (
 
-                        <Card valor={item.valor} setCartItems={setCartItems} title={item.nome} src={item.src} description={item.desc}/>
+                        <Card setModalGeralText={setModalGeralText} setModalGeralShow={setModalGeralShow} valor={item.valor} setCartItems={setCartItems} title={item.nome} src={item.src} description={item.desc}/>
 
                     ))}
 

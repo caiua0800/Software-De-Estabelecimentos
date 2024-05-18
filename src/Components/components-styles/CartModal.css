@@ -15,7 +15,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: cursive;
 }
 
 .items-do-pedido{
@@ -27,10 +26,12 @@
     padding: 10px 20px;
     box-sizing: border-box;
     flex-direction: column;
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(139, 6, 6);
     box-shadow: 3px 3px 4px black;
     border-radius: 12px;
     border: 3px solid black;
+    color: white;
+    overflow: hidden;
 }
 
 .items-do-pedido h1{
@@ -45,12 +46,14 @@
     justify-content: top;
     flex-direction: column;
     align-items: start;
-    padding: 0 20px;
+    padding: 20px 20px;
     gap: 5px;
-    height: 400px;
+    height: max-content;
     overflow-y: scroll;
     overflow-x: hidden;
     box-shadow: 2px 2px 6px black;
+    overflow: hidden;
+
 }
 
 .items h6{
@@ -101,6 +104,7 @@
 .confirm{
     background-color: green;
     transition: .3s;
+    width: 100%;
 }
 
 .confirm:hover{
@@ -110,4 +114,10 @@
 
 .d-none{
     display: none;
+}
+
+.link-no-style{
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
 }
