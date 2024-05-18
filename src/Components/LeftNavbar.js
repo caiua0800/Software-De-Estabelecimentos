@@ -38,7 +38,7 @@ export default function LeftNavbar(props) {
         <div className='LeftNavbar'>
             <div className='navbar'>
                 <div className='navBrand'>
-                    <h1>{title}</h1>
+                    <h1>Mesa 01</h1>
                 </div>
 
                 <div className='nav-items'>
@@ -63,6 +63,11 @@ export default function LeftNavbar(props) {
                 </div>
                 <div onClick={handleHalpClick} className='come-here'>
                     <img src={sino_icon}></img>
+                </div>
+                <div className='meus-pedidos'>
+                    <Link to="/pedidos">
+                        <p>Pedidos</p>
+                    </Link>
                 </div>
             </div>
         </div>

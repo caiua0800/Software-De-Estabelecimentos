@@ -71,7 +71,7 @@
 
 .CART{
     position: absolute;
-    bottom: 0;
+    bottom: 60px;
     color: white;
     cursor: pointer;
     width: 100%;
@@ -84,7 +84,7 @@
 
 .come-here{
     position: absolute;
-    bottom: 60px;
+    bottom: 120px;
     width: 100%;
     background-color: rgba(8, 8, 8, 0);
     height: 60px;
@@ -92,6 +92,33 @@
     justify-content: center;
     align-items: center;
     font-weight: 600;
+    transition: .3s;
+}
+
+.meus-pedidos {
+    position: absolute;
+    bottom: 0;
+    height: 60px;
+    width: 100%;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 22px;
+    transition: .3s;
+}
+
+.meus-pedidos a {
+    text-decoration: none;
+    color: inherit; /* Herda a cor do elemento pai */
+}
+
+.meus-pedidos:hover {
+    transform: scale(1.05);
+    background-color: rgba(255, 255, 255, 0.068);
     transition: .3s;
 }
 

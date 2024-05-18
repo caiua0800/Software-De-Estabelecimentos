@@ -10,12 +10,15 @@ import Hamburgueres from './Components/Hamburgueres';
 import Cart from './Components/Cart';
 import React, { useState, useEffect } from 'react';
 import CallHelpModal from './Components/CallHelpModal';
+import Pedidos from './Components/Pedidos';
 
 
 function App() {
 
   const [CartItems, setCartItems] = useState([]);
+  const [PedidosList, setPedidosList] = useState([])
   const [callHelp, setCallHelp] = useState(false);
+  // const [callBill, setCallBill] = useState(false);
 
   const cardapio = {
 
@@ -100,7 +103,9 @@ function App() {
 
               <Route path="/hamburgueres" element={<Hamburgueres cardapio={cardapio} setCartItems={setCartItems}  />} />
 
-              <Route path="/cart" element={<Cart setCartItems={setCartItems} items={CartItems} />} />
+              <Route path="/cart" element={<Cart setPedidosList={setPedidosList} setCartItems={setCartItems} items={CartItems} />} />
+
+              <Route path="/pedidos" element={<Pedidos pedidos={PedidosList} />} />
 
             </Routes>
 

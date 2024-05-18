@@ -1,7 +1,7 @@
 import React from "react";
-import './components-styles/CartModal.css'
+import './components-styles/CartModal.css';
 
-export default function CartModal({ showModal, items , setShowModal, valorTotal}) {
+export default function CartModal({ showModal, items, setCartItems, setShowModal, setPedidosList, valorTotal }) {
 
     const modalClass = showModal ? 'CartModal' : 'CartModal d-none';
 
@@ -9,16 +9,16 @@ export default function CartModal({ showModal, items , setShowModal, valorTotal}
         setShowModal(false);
     }
 
-    
     const handleConfirm = () => {
+        items.forEach(pedido => {
+            setPedidosList((prevPedidos) => [...prevPedidos, pedido]);
+        })
+        setCartItems([])
         setShowModal(false);
     }
 
-
-
     return (
         <div className={modalClass}>
-
             <div className="items-do-pedido">
                 <h1>PEDIDO</h1>
                 <div className="items">
@@ -33,7 +33,6 @@ export default function CartModal({ showModal, items , setShowModal, valorTotal}
                     <button onClick={handleConfirm} className="confirm">Confirmar</button>
                 </div>
             </div>
-
         </div>
-    )
+    );
 }

@@ -2,7 +2,7 @@ import './components-styles/Cart.css';
 import React, { useState } from 'react';
 import CartModal from './CartModal';
 
-export default function Cart({ items, setCartItems }) {
+export default function Cart({ items, setCartItems, setPedidosList }) {
 
     let valorTotal = 0;
     const [showModal, setShowModal] = useState(false);
@@ -19,9 +19,12 @@ export default function Cart({ items, setCartItems }) {
         setShowModal(true);
     }
 
+
+    
+
     return (
         <div className='Cart'>
-            <CartModal valorTotal={valorTotal} setShowModal={setShowModal} showModal={showModal} items={items} />
+            <CartModal setCartItems={setCartItems} setPedidosList={setPedidosList} valorTotal={valorTotal} setShowModal={setShowModal} showModal={showModal} items={items} />
             <ul className='cart-items'>
                 <h1 className='title-pedidos'>Pedidos</h1>
                 {items.length > 0 ? (
