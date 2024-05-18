@@ -160,6 +160,10 @@
         cursor: pointer;
     }
 
+    .navBrand{
+        text-align: center;
+    }
+
     .menu-icon{
         width: 50px;
         opacity: .8;

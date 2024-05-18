@@ -12,6 +12,7 @@
 
 .Pedidos-title{
     font-size: 28px;
+    text-align: center;
 }
 
 .all-pedidos{
@@ -71,6 +72,7 @@
     align-items: center;
     flex-direction: column;
     gap: 10px;
+    text-align: center;
 }
 
 .total-valor button{
@@ -92,4 +94,24 @@
     font-weight: 600;
 
     transition: .3s;
+}
+
+@media (max-width: 700px){
+    .Pedido{
+        padding: 0px 10px;
+    }
+
+    .Pedidos-title{
+        font-size: 18px;
+        padding: 0px 10px;
+    }
+
+    .Pedido-title{
+        font-size: 16px;
+    }
+
+    .Pedido-valor{
+        font-size: 16px;
+
+    }
 }
