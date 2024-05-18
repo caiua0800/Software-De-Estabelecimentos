@@ -13,7 +13,7 @@ export default function LeftNavbar(props) {
 
     const drink_icon = shortURL + 'drink-icon-2.png?alt=media&token=3ac46963-131a-421b-9a73-8aafc2209a3b';
 
-    const food_icon = shortURL + 'hamburguer-icon-2.png?alt=media&token=0daa3c38-9b63-4ffd-a75f-c1c8c27de19b';
+    const food_icon = shortURL + 'hamburguer-icon.png?alt=media&token=ca64c5ee-0c51-42f1-9212-c56c6a729bc0';
 
     const cart_icon = shortURL + 'shopping_cart_PNG38.png?alt=media&token=8c84a3ba-4fc6-4a60-b9b5-25d79557bbd0'
 

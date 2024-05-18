@@ -49,8 +49,24 @@ function App() {
           nome: 'Ciri Cascudo',
           src: 'https://firebasestorage.googleapis.com/v0/b/restaurante-menu-5bad4.appspot.com/o/cardapio%2Fhamburguer%2Fciri%20cascudo.jpeg?alt=media&token=7a90c931-6b19-46e5-9c67-b1fe5ea19bb7',
           valor: 28.50,
+          desc: 'Receita Secreta',
           fav: false
+        },
+        {
+          nome: 'X-TUDO',
+          src: 'https://firebasestorage.googleapis.com/v0/b/restaurante-menu-5bad4.appspot.com/o/cardapio%2Fhamburguer%2Fx-tudo.jpg?alt=media&token=f6c27a76-0608-42a8-ad2e-c81be1fdef20',
+          valor: 32.50,
+          desc: '(2x) hamburguer de costela, salsicha, bacon, barbecue, cebolas caramelizadas, cheader',
+          fav: false
+        },
+        {
+          nome: 'Chicken Salad',
+          src: 'https://firebasestorage.googleapis.com/v0/b/restaurante-menu-5bad4.appspot.com/o/cardapio%2Fhamburguer%2Fhamburguer-frango-salad.jpeg?alt=media&token=40e17e40-6e48-4aec-b612-b263b1c21747',
+          desc: 'Hamburguer Crocante de Franco, Salada, Molho Verde',
+          valor: 34.00,
+          fav: true
         }
+        
     ],
 
     drink: [
@@ -77,6 +93,30 @@ function App() {
         valor: 8.90,
         fav: true,
         alcool: false
+      },
+      {
+        nome: 'Sex On the Beach',
+        src: 'https://firebasestorage.googleapis.com/v0/b/restaurante-menu-5bad4.appspot.com/o/cardapio%2Fdrinks%2Fsex-on-the-beach.jpeg?alt=media&token=cc6ff6b1-7fae-49da-ac2e-4f5b58d3df9c',
+        desc: 'Vodka, Licor, suco de polpa',
+        valor: 29.20,
+        fav: true,
+        alcool: true
+      },
+      {
+        nome: 'Negroni',
+        src: 'https://firebasestorage.googleapis.com/v0/b/restaurante-menu-5bad4.appspot.com/o/cardapio%2Fdrinks%2Fnegroni.jpeg?alt=media&token=5664fcf6-f286-4e3d-9c2e-33c8b62ea7ac',
+        desc: 'Gim e Varmut Russo',
+        valor: 35.50,
+        fav: false,
+        alcool: true
+      },
+      {
+        nome: 'Mojito',
+        src: 'https://firebasestorage.googleapis.com/v0/b/restaurante-menu-5bad4.appspot.com/o/cardapio%2Fdrinks%2Fmojito-foto.jpg?alt=media&token=9220eff3-44af-4aa5-9998-1eeb2d7cac4a',
+        desc: 'Hortelã, Açucar, Limão e Água com Gás',
+        valor: 18.90,
+        fav: true,
+        alcool: true
       }
     ]
 
