@@ -42,7 +42,7 @@ export default function LeftNavbar(props) {
                 </div>
 
                 <div className='nav-items'>
-                    <Link to="/home" className={active === 'home' ? 'nav-link active' : 'nav-link'} onClick={() => handleNavLinkClick('home')}>
+                    <Link to="/" className={active === 'home' ? 'nav-link active' : 'nav-link'} onClick={() => handleNavLinkClick('home')}>
                         <img className='menu-icon' alt='Home Icon' src={home_icon} />
                     </Link>
                     <Link to="/favorites" className={active === 'favorite' ? 'nav-link active' : 'nav-link'} onClick={() => handleNavLinkClick('favorite')}>

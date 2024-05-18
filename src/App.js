@@ -138,7 +138,7 @@ function App() {
 
             <Routes>
 
-              <Route path="/home" element={<Home setCallHelp={setCallHelp} setCartItems={setCartItems} />} />
+              <Route path="/" element={<Home setCallHelp={setCallHelp} setCartItems={setCartItems} />} />
               <Route path="/favorites" element={<Favorites setModalGeralShow={setModalGeralShow} setModalGeralText={setModalGeralText} cardapio={cardapio} setCartItems={setCartItems}  />} />
               
               <Route path="/drink" element={<Drinks setModalGeralShow={setModalGeralShow} setModalGeralText={setModalGeralText} cardapio={cardapio} setCartItems={setCartItems}  />} />

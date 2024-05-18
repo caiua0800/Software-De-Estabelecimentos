@@ -10,46 +10,18 @@
 }
 
 .Home-section{
-    width: 100%;
+    width: max-content;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-    gap: 5px;
 }
 
-.Home-section button{
-    width: 50%;
-    height: 60px;
-    font-weight: 600;
-    font-size: 28px;
-    transition: .3s;
-    cursor: pointer;
+.Home-section div{
+    width: 80%;
 }
 
-.call-help{
-    background-color: rgb(28, 71, 211);
-    border: 2px solid black;
-    color: white;
-}
-
-.call-help:hover{
-    background-color: rgb(49, 207, 255);
-    border: 2px solid rgb(255, 255, 255);
-    color: black;
-    transition: .3s;
-}
-
-.call-bill{
-    background-color: rgb(16, 192, 16);
-    border: 2px solid black;
-}
-
-.call-bill:hover{
-    background-color: rgb(2, 255, 2);
-    border: 2px solid rgb(255, 255, 255); 
-    color: white;
-    transition: .3s;
+.Home-section div img{
+    width: 100%;
 }
 
 
