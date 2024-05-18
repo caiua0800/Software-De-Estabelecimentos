@@ -29,7 +29,7 @@ export default function Cards({setCartItems, cardapio}) {
 
     return (
         <div className="carousel-container">
-            <button className="left-arrow arrow" onClick={scrollLeft}><img src={leftImage} alt="left" /></button>
+            <button className="left-arrow arrow" onClick={scrollLeft}>{"<"}</button>
             <div className='carousel' ref={carouselRef}>
                 <div className='Cards'>
                     {cardapio.map((item, index) => (
@@ -40,7 +40,7 @@ export default function Cards({setCartItems, cardapio}) {
 
                 </div>
             </div>
-            <button className="right-arrow arrow" onClick={scrollRight}><img src={rightImage} alt="right" /></button>
+            <button className="right-arrow arrow" onClick={scrollRight}>{">"}</button>
         </div>
     );
 }

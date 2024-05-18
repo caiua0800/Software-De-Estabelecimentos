@@ -9,12 +9,13 @@ import Drinks from './Components/Drinks';
 import Hamburgueres from './Components/Hamburgueres';
 import Cart from './Components/Cart';
 import React, { useState, useEffect } from 'react';
+import CallHelpModal from './Components/CallHelpModal';
 
 
 function App() {
 
   const [CartItems, setCartItems] = useState([]);
-
+  const [callHelp, setCallHelp] = useState(false);
 
   const cardapio = {
 
@@ -55,43 +56,44 @@ function App() {
         src: 'https://firebasestorage.googleapis.com/v0/b/restaurante-menu-5bad4.appspot.com/o/cardapio%2Fdrinks%2Fmorango-splited.png?alt=media&token=fd8b5046-aca6-4219-941d-0f6c3796c0c7',
         desc: 'Vodka, Morando, Cementes, Adoçante',
         valor: 18.50,
-        fav: true
+        fav: true,
+        alcool: true
       },
       {
         nome: 'Dose Red Lable',
         src: 'https://firebasestorage.googleapis.com/v0/b/restaurante-menu-5bad4.appspot.com/o/cardapio%2Fdrinks%2Fwisk-gelo.png?alt=media&token=b095f6e0-17c4-4cf3-a15f-6afa75149d46',
         desc: '100ml RED BLACK',
         valor: 15.50,
-        fav: false
+        fav: false,
+        alcool: true
       },
       {
         nome: 'Sucos Naturais',
         src: 'https://firebasestorage.googleapis.com/v0/b/restaurante-menu-5bad4.appspot.com/o/cardapio%2Fdrinks%2Fnatural-juices.png?alt=media&token=45da2539-5812-4647-b760-74857f5726f4',
         desc: 'Laranja, Morango, Maçã, Abacaxi',
         valor: 8.90,
-        fav: true
+        fav: true,
+        alcool: false
       }
     ]
 
-}
-
-
-  useEffect(() => {
-    console.log("Cart items updated:", CartItems);
-  }, [CartItems]);
+  }
 
   return (
     <Router>
       <div className="App">
+
+        <CallHelpModal callHelp={callHelp}/>
+
         <ContainerPart>
 
-          <LeftNavbar title="Logo" />
+          <LeftNavbar setCallHelp={setCallHelp} title="Logo" />
 
           <Container>
 
             <Routes>
 
-              <Route path="/home" element={<Home setCartItems={setCartItems} />} />
+              <Route path="/home" element={<Home setCallHelp={setCallHelp} setCartItems={setCartItems} />} />
               <Route path="/favorites" element={<Favorites cardapio={cardapio} setCartItems={setCartItems}  />} />
               
               <Route path="/drink" element={<Drinks cardapio={cardapio} setCartItems={setCartItems}  />} />

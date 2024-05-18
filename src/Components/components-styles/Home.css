@@ -24,7 +24,7 @@
     font-weight: 600;
     font-size: 28px;
     transition: .3s;
-
+    cursor: pointer;
 }
 
 .call-help{
