@@ -7,9 +7,9 @@ export default function LeftNavbar(props) {
 
     const shortURL = 'https://firebasestorage.googleapis.com/v0/b/restaurante-menu-5bad4.appspot.com/o/';
     const home_icon = shortURL + 'home-icon.png?alt=media&token=67bbf3b8-73b0-4647-b682-17b2d226069d';
-    const emoticon_icon = shortURL + 'emoji-favoritos.png?alt=media&token=8d29c728-4ba1-415b-855b-f1689c6f8718';
-    const drink_icon = shortURL + 'bebida.png?alt=media&token=e06ac7ee-fddd-40e3-beed-dc5b864d51b1';
-    const food_icon = shortURL + 'hamburgue.png?alt=media&token=40430ae9-aba6-4d49-9a25-96df89df07de';
+    const emoticon_icon = shortURL + 'hart-removebg-preview.png?alt=media&token=c31cb670-c2d1-45b1-a2e9-67990c8c3d1c';
+    const drink_icon = shortURL + 'drink-icon-removebg-preview.png?alt=media&token=e243d508-805e-4f8e-b3e5-1e76b145d507';
+    const food_icon = shortURL + 'hamburguer-icon-removebg-preview.png?alt=media&token=f3a24e6e-6b6f-4792-9acb-9759665eadb7';
 
     const cart_icon = shortURL + 'shopping_cart_PNG38.png?alt=media&token=8c84a3ba-4fc6-4a60-b9b5-25d79557bbd0'
 

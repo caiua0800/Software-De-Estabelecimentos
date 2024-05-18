@@ -8,21 +8,9 @@ export default function Home({setCartItems}){
 
     return (
         <div className='Home'>
-            
-            <div className='drinks home-section'>
-                <h1>DRINKS</h1>
-                <Cards setCartItems={setCartItems} />
-            </div>
-
-            <div className='drinks home-section'>
-                <h1>HAMBURGUERES</h1>
-                <Cards setCartItems={setCartItems} />
-
-            </div>
-
-            <div className='drinks home-section'>
-                <h1>HOT-DOGS</h1>
-                <Cards setCartItems={setCartItems} />
+            <div className='Home-section'>
+                <button className='call-help'>CHAMAR GARÇON</button>
+                <button className='call-bill'>PEDIR A CONTA</button>
             </div>
         </div>
     )

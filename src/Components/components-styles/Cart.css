@@ -97,3 +97,46 @@
     font-style: italic;
 }
 
+@media (max-width: 700px){
+
+    .Cart{
+        padding: 20px;
+    }
+
+    .title-pedidos{
+        width: 100%;
+        text-align: center;
+    }
+    
+    .cart-items{
+        padding: 5px 10px;
+        list-style: none !important;
+    }
+
+    .cart-item{
+        padding-left: 0px;
+        margin: 0px;
+    }
+    
+    .cart-item button{
+        margin-right: 0px;
+    }
+    
+    .values{
+        width: 100%;
+        text-align: center;
+    }
+    
+    
+    .btn-area-cart button{
+        width: 150px;
+        margin: auto;
+    }
+    
+    .btn-area-cart button:hover{
+        background-color: rgb(5, 124, 55);
+        color: white;
+        transition: .3s;
+    }
+    
+}

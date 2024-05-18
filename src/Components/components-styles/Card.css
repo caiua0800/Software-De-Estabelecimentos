@@ -1,7 +1,7 @@
 .Card{
     background-color: rgb(0, 0, 0);
-    min-width: 290px;
-    min-height: 280px;
+    width: 290px;
+    min-height: max-content;
     padding: 10px;
     box-sizing: border-box;
     border-radius: 8px;
@@ -11,7 +11,9 @@
 .card-face{
     background-color: #ffffff07;
     border-radius: 8px;
-    min-height: 150px;
+    height: 200px;
+    overflow: hidden;
+    width: 100%;
     display: flex;
     justify-content: center;
     padding: 10px;
@@ -20,12 +22,14 @@
 }
 
 .card-face img{
-    width: 80px;
+    width: 200px;
 }
 
 .card-body{
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+    height: 200px;
 }
 
 .card-title{
@@ -57,4 +61,36 @@
     background-color: rgb(255, 255, 255);
     color: rgb(17, 0, 0);
     transition: .3s;
+}
+
+@media (max-width: 700px){
+    .Card{
+        width: 250px;
+        overflow: hidden;
+    }
+    
+    .card-face{
+        height: 150px;
+        overflow: hidden;
+    }
+
+    .card-body{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 200px;
+    }
+    
+    .card-title{
+        text-align: center;
+    }
+    
+    .btn-area{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 10px;
+        box-sizing: border-box;
+    }
 }

@@ -2,7 +2,7 @@
     position: relative;
     width: 1500px;
     border-radius: 12px;
-    overflow: hidden; /* Ajustado para ocultar o overflow */
+    overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -22,14 +22,25 @@
 }
 
 .arrow {
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(240, 248, 255, 0);
     color: white;
     border: none;
     padding: 10px;
+    width: 100px;
     cursor: pointer;
     z-index: 1;
     top: 50%;
     transform: translateY(-50%);
+}
+
+.arrow img{
+    width: 100px;
+    height: 50px;
+    opacity: 0.7;
+}
+
+.arrow img:hover{
+    opacity: 1;
 }
 
 .left-arrow {
@@ -43,4 +54,26 @@
 .arrow img {
     width: 50px; 
     height: 50px; 
+}
+
+@media (max-width: 700px){
+    .carousel-container {
+        width: 280px;
+    }
+    
+    .carousel {
+        display: flex;
+        overflow-x: scroll;
+        width: max-content;
+    }
+    
+    .Cards {
+        display: flex;
+        gap: 30px;
+    }
+    
+    .arrow {
+        display: none;
+    }
+    
 }
