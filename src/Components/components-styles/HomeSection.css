@@ -1,0 +1,12 @@
+.HomeSection{
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0);
+    color: white;
+    border-radius: 16px;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    text-align: center;
+}
+

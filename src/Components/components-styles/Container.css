@@ -11,8 +11,9 @@
 
 @media (max-width: 750px){
     .Container{
-        padding: 10px;
-        width: calc(100% - 100px);
+        padding: 0;
+        width: 100%;
         max-height: max-content;
+        background-image: url('https://firebasestorage.googleapis.com/v0/b/restaurante-menu-5bad4.appspot.com/o/body-view.png?alt=media&token=a1a8cfe2-16ae-43bf-9c34-23897305c980');
     }
 }

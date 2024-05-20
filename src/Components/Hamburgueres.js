@@ -1,6 +1,7 @@
 import './components-styles/Hamburgueres.css'
 import React from 'react'
 import Cards from './Cards'
+import HomeSection from './HomeSection'
 
 export default function Hamburgueres({setCartItems, cardapio, setModalGeralShow, setModalGeralText}){
 
@@ -10,11 +11,10 @@ export default function Hamburgueres({setCartItems, cardapio, setModalGeralShow,
         <div className='Hamburgueres'>
 
 
-            <div className='drinks home-section'>
-                <h1>HAMBURGUERES</h1>
+            <HomeSection>
+                <h1 className='box-title'>HAMBURGUERES</h1>
                 <Cards setModalGeralShow={setModalGeralShow} setModalGeralText={setModalGeralText} cardapio={cardapio_hamburguer} setCartItems={setCartItems} />
-
-            </div>
+            </HomeSection>
 
 
         </div>

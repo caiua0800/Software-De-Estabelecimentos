@@ -97,21 +97,39 @@
 }
 
 @media (max-width: 700px){
+
+    .Pedidos{
+        width: 100%;
+        height: 80%;
+        background-color: rgba(240, 248, 255, 0.897);
+        border-radius: 12px;
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        position: relative;
+        margin: 120px 0;
+        
+    }
+
     .Pedido{
         padding: 0px 10px;
     }
 
     .Pedidos-title{
-        font-size: 18px;
+        font-size: 14px;
         padding: 0px 10px;
     }
 
     .Pedido-title{
-        font-size: 16px;
+        font-size: 14px;
     }
 
     .Pedido-valor{
-        font-size: 16px;
+        font-size: 14px;
+    }
 
+    .total-valor{
+        font-size: 16px;
     }
 }

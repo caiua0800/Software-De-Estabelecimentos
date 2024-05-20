@@ -12,6 +12,8 @@ import React, { useState, useEffect } from 'react';
 import CallHelpModal from './Components/CallHelpModal';
 import Pedidos from './Components/Pedidos';
 import ModalGeral from './Components/ModalGeral';
+import NavbarTop from './Components/NavbarTop';
+import useMedia from 'use-media';
 
 function App() {
 
@@ -20,6 +22,8 @@ function App() {
   const [callHelp, setCallHelp] = useState(false);
   const [ModalGeralShow, setModalGeralShow] = useState('d-none')
   const [ModalGeralText, setModalGeralText] = useState('texto')
+
+  const isLargeScreen = useMedia({ minWidth: '700px' });
 
   const cardapio = {
 
@@ -132,7 +136,11 @@ function App() {
 
         <ContainerPart>
 
-          <LeftNavbar setCallHelp={setCallHelp} title="Logo" />
+        {isLargeScreen ? (
+            <LeftNavbar className="leftNavBar" setCallHelp={setCallHelp} title="Logo" />
+          ) : (
+            <NavbarTop className="topNavBar" setCallHelp={setCallHelp} title="Logo" />
+          )}
 
           <Container>
 

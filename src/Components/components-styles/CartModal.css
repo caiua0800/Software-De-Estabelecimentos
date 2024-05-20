@@ -26,11 +26,11 @@
     padding: 10px 20px;
     box-sizing: border-box;
     flex-direction: column;
-    background-color: rgb(139, 6, 6);
+    background-color: rgb(255, 255, 255);
     box-shadow: 3px 3px 4px black;
     border-radius: 12px;
     border: 3px solid black;
-    color: white;
+    color: rgb(0, 0, 0);
     overflow: hidden;
 }
 
