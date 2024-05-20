@@ -22,7 +22,7 @@ export default function Favorites( {setCartItems, cardapio,setModalGeralShow, se
     return (
         <div className='Favorites'>
 
-            <h1 className='title-obj'>FAVORITOS DA CASA</h1>
+            <h1 className='title-obj'></h1>
 
             <HomeSection className="drinks">
 
