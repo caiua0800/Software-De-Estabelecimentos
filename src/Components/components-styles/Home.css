@@ -28,6 +28,9 @@
     display: none;
 }
 
+.as-s{
+    display: none;
+}
 
 @media (max-width: 700px){
 
@@ -60,5 +63,53 @@
         text-align: center;
         color: white;
         font-size: 14px;
+    }
+
+    .as-s{
+        display: flex;
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+    }
+
+    .cart-bill{
+        display: flex;
+        width: 90%;
+        justify-content: space-between;
+    }
+
+    .cart-bill-secondary{
+        display: flex;
+        gap: 10px;
+    }
+
+    .nav-item button{
+        width: 70px;
+        height: 50px;
+        background-color: rgb(156, 233, 247);
+        padding: 15px;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .nav-item img{
+        width: 100%;
+    }
+
+    .call-help-home{
+        width: 70px;
+        height: 50px;
+        background-color: rgb(156, 233, 247);
+        padding: 15px;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .call-help-home img{
+        width: 100%;
     }
 }

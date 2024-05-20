@@ -12,6 +12,8 @@ export default function NavbarTop(){
         else setSowNav('drop-menu');
     }
 
+
+
     return (
         <div className='NavbarTop'>
             <button onClick={handleShowNav} className='btn-dropdown'><img src='https://firebasestorage.googleapis.com/v0/b/fagner-rangel.appspot.com/o/menu.png?alt=media&token=e064e0c4-73dc-4d8c-aafe-dacfdad5cec0'></img> </button>
@@ -30,12 +32,8 @@ export default function NavbarTop(){
                     <Link onClick={handleShowNav} to='/hamburgueres' className='nav-item'>
                         <a>Hamburguers</a>
                     </Link>
-                    <Link onClick={handleShowNav} to='/cart' className='nav-item'>
-                        <a>Carrinho</a>
-                    </Link>
-                    <Link onClick={handleShowNav} to='/pedidos' className='nav-item'>
-                        <a>Pedidos</a>
-                    </Link>
+
+
                 </div>
             </div>
         </div>
